@@ -29,6 +29,7 @@ int power (int a, int b)
 //82 -> 10
 
 //9012 -> 12
+/*
 Console.Write ("Введите число:");
 string numberStr=Console.ReadLine()!; // даже переводить в int не будем, так проще
 
@@ -54,6 +55,29 @@ int getSumOfNumber2(string str) // так как мы "не проходили" 
     {
         result+= temp%10; // последняя цифра
         temp=temp/10;// целлочисленное деление - без послденей цифры
+    }
+    return result;
+}
+*/
+//Задача 29: Напишите программу, которая задаёт массив из 8 рандомных элементов и выводит их на экран.
+
+//1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+//6, 1, 33 -> [6, 1, 33]
+
+printArray(fillArray(8));
+
+void printArray (int[] arr)
+{
+    Console.WriteLine ($"[{String.Join(",",arr)}]");
+}
+
+int[] fillArray (int count)
+{
+    int[] result=new int[count];
+    for (int i=0;i<count;i++)
+    {
+        result[i]=new Random().Next(0,10);
     }
     return result;
 }
